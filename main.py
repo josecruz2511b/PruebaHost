@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from .routers import auth
 from database import engine, Base
-from routers import auth, users, courses, modules, lessons, exercises, progress
+from routers import users, courses, modules, lessons, exercises, progress
+
 
 # Crear tablas de la base de datos
 Base.metadata.create_all(bind=engine)
