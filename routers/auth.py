@@ -4,7 +4,7 @@ from datetime import timedelta
 from database import get_db
 from models import User
 from schemas import UserCreate, UserLogin, Token, User as UserSchema
-from auth import get_password_hash, verify_password, create_access_token, get_current_user, ACCESS_TOKEN_EXPIRE_MINUTES
+from routers.auth import get_password_hash, verify_password, create_access_token, get_current_user, ACCESS_TOKEN_EXPIRE_MINUTES
 
 router = APIRouter(prefix="/auth", tags=["🔐 Autenticación"])
 

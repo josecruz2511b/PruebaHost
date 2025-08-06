@@ -4,7 +4,7 @@ from typing import List, Optional
 from database import get_db
 from models import ExerciseAttempt, Lesson, User
 from schemas import ExerciseAttempt as ExerciseAttemptSchema, ExerciseSubmission
-from auth import get_current_user
+from routers.auth import get_current_user
 
 router = APIRouter(prefix="/ejercicios", tags=["🧪 Ejercicios / Intentos"])
 
